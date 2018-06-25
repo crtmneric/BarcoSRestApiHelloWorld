@@ -17,12 +17,14 @@ namespace BarcoSRestApi.Controllers
         private IProductService productService = new ProductService();
 
         [HttpGet]
+        [Route("api/v1/ProductList")]
         public IEnumerable<Product> Get()
         {
             return productService.GetProducts();
         }
 
         [ResponseType(typeof(Product))]
+        [Route("api/v1/GetProductByName/{name}")]
         [HttpGet]
         public IHttpActionResult Get(string name)
         {
@@ -34,6 +36,7 @@ namespace BarcoSRestApi.Controllers
 
         [ResponseType(typeof(Boolean))]
         [HttpDelete]
+        [Route("api/v1/DeleteProduct/{name}")]
         public IHttpActionResult Delete(string name)
         {
 
@@ -43,6 +46,7 @@ namespace BarcoSRestApi.Controllers
         }
 
         [ResponseType(typeof(Boolean))]
+        [Route("api/v1/AddProduct")]
         [HttpPost]
         public IHttpActionResult Post([FromBody]Product product)
         {

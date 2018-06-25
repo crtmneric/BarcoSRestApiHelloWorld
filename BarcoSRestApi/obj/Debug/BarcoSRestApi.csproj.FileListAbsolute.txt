@@ -68,3 +68,7 @@ c:\users\serkan\source\repos\BarcoSRestApi\BarcoSRestApi\obj\Debug\BarcoSRestApi
 c:\users\serkan\source\repos\BarcoSRestApi\BarcoSRestApi\obj\Debug\BarcoSRestApi.csproj.CopyComplete
 c:\users\serkan\source\repos\BarcoSRestApi\BarcoSRestApi\obj\Debug\BarcoSRestApi.dll
 c:\users\serkan\source\repos\BarcoSRestApi\BarcoSRestApi\obj\Debug\BarcoSRestApi.pdb
+C:\Users\Serkan\source\repos\BarcoSRestApi\BarcoSRestApi\bin\Swagger.xml
+C:\Users\Serkan\source\repos\BarcoSRestApi\BarcoSRestApi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Serkan\source\repos\BarcoSRestApi\BarcoSRestApi\bin\Swashbuckle.Core.dll
+C:\Users\Serkan\source\repos\BarcoSRestApi\BarcoSRestApi\bin\WebActivatorEx.dll
