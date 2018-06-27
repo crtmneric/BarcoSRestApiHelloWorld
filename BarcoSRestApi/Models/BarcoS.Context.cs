@@ -13,10 +13,10 @@ namespace BarcoSRestApi.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BarcoSEntities : DbContext
+    public partial class BarcosEntities : DbContext
     {
-        public BarcoSEntities()
-            : base("name=BarcoSEntities")
+        public BarcosEntities()
+            : base("name=BarcosEntities")
         {
         }
     

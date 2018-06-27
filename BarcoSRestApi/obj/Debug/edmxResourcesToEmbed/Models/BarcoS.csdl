@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="BarcoSDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="BarcoSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Bank">
     <Key>
       <PropertyRef Name="id" />
@@ -151,9 +151,9 @@
     <Property Name="auth_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="auth_phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="reg_date" Type="DateTime" Precision="0" />
+    <Property Name="reg_date" Type="DateTime" Precision="3" />
   </EntityType>
-  <EntityContainer Name="BarcoSEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="BarcosEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Banks" EntityType="Self.Bank" />
     <EntitySet Name="Brands" EntityType="Self.Brand" />
     <EntitySet Name="categories" EntityType="Self.category" />

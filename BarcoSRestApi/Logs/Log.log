@@ -1,0 +1,8 @@
+2018-06-27 14:22:26,207 [81] INFO  BarcoSRestApi.Extensions.Logger - trying to add user for email:asd, password: 0, authName: asd, apiKey: SohNoQHtcGZsTH1JY5zkKiU8Wshvp8VV5xWyaThNmb6nhwRK4YdYYIgEtO6AKDengijhMXtwsDhMaDLsZSnl9L5y2RzJ62duyPmXL
+2018-06-27 14:23:53,034 [97] INFO  BarcoSRestApi.Extensions.Logger - trying to add user for email:asd, password: 0, authName: asd, apiKey: SohNoQHtcGZsTH1JY5zkKiU8Wshvp8VV5xWyaThNmb6nhwRK4YdYYIgEtO6AKDengijhMXtwsDhMaDLsZSnl9L5y2RzJ62duyPmXL
+2018-06-27 14:25:13,018 [7] INFO  BarcoSRestApi.Extensions.Logger - trying to add user for email:strasding, password: 0, authName: sd, apiKey: SohNoQHtcGZsTH1JY5zkKiU8Wshvp8VV5xWyaThNmb6nhwRK4YdYYIgEtO6AKDengijhMXtwsDhMaDLsZSnl9L5y2RzJ62duyPmXL
+2018-06-27 14:59:25,696 [22] INFO  BarcoSRestApi.Extensions.Logger - trying to add user for email:yarrak@çük.com, password: 6549, authName: asdsaf, apiKey: SohNoQHtcGZsTH1JY5zkKiU8Whvp8VV5xWyaThNmb6nhwRK4YdYYIgEtO6AKDengijhMXtwsDhMaDLsZSnl9L5y2RzJ62duyPmXL
+2018-06-27 14:59:27,991 [22] INFO  BarcoSRestApi.Extensions.Logger - successfully created user, now inserting to database: BarcoSRestApi.Models.user
+2018-06-27 14:59:28,429 [22] INFO  BarcoSRestApi.Extensions.Logger - successfully added user 
+2018-06-27 15:41:46,330 [9] INFO  BarcoSRestApi.Extensions.Logger - trying to add user for email:, password: 0, authName: string, apiKey: SohNoQHtcGZsTH1JY5zkKiU8Whvp8VV5xWyaThNmb6nhwRK4YdYYIgEtO6AKDengijhMXtwsDhMaDLsZSnl9L5y2RzJ62duyPmXL
+2018-06-27 15:43:38,654 [6] INFO  BarcoSRestApi.Extensions.Logger - trying to add user for email:, password: 0, authName: string, apiKey: SohNoQHtcGZsTH1JY5zkKiU8Whvp8VV5xWyaThNmb6nhwRK4YdYYIgEtO6AKDengijhMXtwsDhMaDLsZSnl9L5y2RzJ62duyPmXL

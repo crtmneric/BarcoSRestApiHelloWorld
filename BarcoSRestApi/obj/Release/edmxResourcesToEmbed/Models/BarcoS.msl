@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="BarcoSDbModelStoreContainer" CdmEntityContainer="BarcoSEntities">
+  <EntityContainerMapping StorageEntityContainer="BarcoSModelStoreContainer" CdmEntityContainer="BarcosEntities">
     <EntitySetMapping Name="Banks">
-      <EntityTypeMapping TypeName="BarcoSDbModel.Bank">
+      <EntityTypeMapping TypeName="BarcoSModel.Bank">
         <MappingFragment StoreEntitySet="Banks">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="company_id" ColumnName="company_id" />
@@ -14,7 +14,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Brands">
-      <EntityTypeMapping TypeName="BarcoSDbModel.Brand">
+      <EntityTypeMapping TypeName="BarcoSModel.Brand">
         <MappingFragment StoreEntitySet="Brands">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="company_id" ColumnName="company_id" />
@@ -25,7 +25,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="categories">
-      <EntityTypeMapping TypeName="BarcoSDbModel.category">
+      <EntityTypeMapping TypeName="BarcoSModel.category">
         <MappingFragment StoreEntitySet="categories">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="company_id" ColumnName="company_id" />
@@ -37,7 +37,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Companies">
-      <EntityTypeMapping TypeName="BarcoSDbModel.Company">
+      <EntityTypeMapping TypeName="BarcoSModel.Company">
         <MappingFragment StoreEntitySet="Companies">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
@@ -59,7 +59,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Current_Details">
-      <EntityTypeMapping TypeName="BarcoSDbModel.Current_Details">
+      <EntityTypeMapping TypeName="BarcoSModel.Current_Details">
         <MappingFragment StoreEntitySet="Current_Details">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="company_id" ColumnName="company_id" />
@@ -73,7 +73,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Currenties">
-      <EntityTypeMapping TypeName="BarcoSDbModel.Currenty">
+      <EntityTypeMapping TypeName="BarcoSModel.Currenty">
         <MappingFragment StoreEntitySet="Currenties">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="company_id" ColumnName="company_id" />
@@ -93,7 +93,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Features">
-      <EntityTypeMapping TypeName="BarcoSDbModel.Feature">
+      <EntityTypeMapping TypeName="BarcoSModel.Feature">
         <MappingFragment StoreEntitySet="Features">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="company_id" ColumnName="company_id" />
@@ -102,7 +102,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Products">
-      <EntityTypeMapping TypeName="BarcoSDbModel.Product">
+      <EntityTypeMapping TypeName="BarcoSModel.Product">
         <MappingFragment StoreEntitySet="Products">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="company_id" ColumnName="company_id" />
@@ -129,7 +129,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="users">
-      <EntityTypeMapping TypeName="BarcoSDbModel.user">
+      <EntityTypeMapping TypeName="BarcoSModel.user">
         <MappingFragment StoreEntitySet="users">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="company_id" ColumnName="company_id" />
@@ -152,7 +152,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Warehouses">
-      <EntityTypeMapping TypeName="BarcoSDbModel.Warehouse">
+      <EntityTypeMapping TypeName="BarcoSModel.Warehouse">
         <MappingFragment StoreEntitySet="Warehouses">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="company_id" ColumnName="company_id" />

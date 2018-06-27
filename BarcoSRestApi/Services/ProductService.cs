@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using BarcoSRestApi.Models;
 
 namespace BarcoSRestApi.Services
 {
     public class ProductService : IProductService
     {
-        private BarcoSEntities db = new BarcoSEntities();
+        private readonly BarcosEntities db = new BarcosEntities();
 
         public bool DeleteProduct(string name)
         {
@@ -18,17 +16,14 @@ namespace BarcoSRestApi.Services
                 db.SaveChanges();
                 return true;
             }
-            else
-            {
-                return false;
-            }
+
+            return false;
         }
 
         public bool AddProduct(Product product)
         {
-            if (product!=null)
-            {
-              ;
+            if (product != null)
+            {              
                 db.Products.Add(product);
                 db.SaveChanges();
                 return true;
@@ -36,6 +31,7 @@ namespace BarcoSRestApi.Services
 
             return false;
         }
+
         public Product GetProduct(string name)
         {
             return db.Products.Where(x => x.name == name).FirstOrDefault();

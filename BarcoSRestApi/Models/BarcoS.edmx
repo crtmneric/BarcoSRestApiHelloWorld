@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BarcoSDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="BarcoSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Banks">
           <Key>
             <PropertyRef Name="id" />
@@ -156,9 +156,9 @@
           <Property Name="auth_name" Type="nvarchar(max)" />
           <Property Name="auth_phone" Type="nvarchar(max)" />
           <Property Name="adress" Type="nvarchar(max)" />
-          <Property Name="reg_date" Type="date" />
+          <Property Name="reg_date" Type="datetime" />
         </EntityType>
-        <EntityContainer Name="BarcoSDbModelStoreContainer">
+        <EntityContainer Name="BarcoSModelStoreContainer">
           <EntitySet Name="Banks" EntityType="Self.Banks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Brands" EntityType="Self.Brands" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="categories" EntityType="Self.categories" Schema="dbo" store:Type="Tables" />
@@ -174,7 +174,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="BarcoSDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="BarcoSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Bank">
           <Key>
             <PropertyRef Name="id" />
@@ -326,9 +326,9 @@
           <Property Name="auth_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="auth_phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="reg_date" Type="DateTime" Precision="0" />
+          <Property Name="reg_date" Type="DateTime" Precision="3" />
         </EntityType>
-        <EntityContainer Name="BarcoSEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BarcosEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Banks" EntityType="Self.Bank" />
           <EntitySet Name="Brands" EntityType="Self.Brand" />
           <EntitySet Name="categories" EntityType="Self.category" />
@@ -345,9 +345,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BarcoSDbModelStoreContainer" CdmEntityContainer="BarcoSEntities">
+        <EntityContainerMapping StorageEntityContainer="BarcoSModelStoreContainer" CdmEntityContainer="BarcosEntities">
           <EntitySetMapping Name="Banks">
-            <EntityTypeMapping TypeName="BarcoSDbModel.Bank">
+            <EntityTypeMapping TypeName="BarcoSModel.Bank">
               <MappingFragment StoreEntitySet="Banks">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="company_id" ColumnName="company_id" />
@@ -359,7 +359,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Brands">
-            <EntityTypeMapping TypeName="BarcoSDbModel.Brand">
+            <EntityTypeMapping TypeName="BarcoSModel.Brand">
               <MappingFragment StoreEntitySet="Brands">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="company_id" ColumnName="company_id" />
@@ -370,7 +370,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="categories">
-            <EntityTypeMapping TypeName="BarcoSDbModel.category">
+            <EntityTypeMapping TypeName="BarcoSModel.category">
               <MappingFragment StoreEntitySet="categories">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="company_id" ColumnName="company_id" />
@@ -382,7 +382,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Companies">
-            <EntityTypeMapping TypeName="BarcoSDbModel.Company">
+            <EntityTypeMapping TypeName="BarcoSModel.Company">
               <MappingFragment StoreEntitySet="Companies">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -404,7 +404,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Current_Details">
-            <EntityTypeMapping TypeName="BarcoSDbModel.Current_Details">
+            <EntityTypeMapping TypeName="BarcoSModel.Current_Details">
               <MappingFragment StoreEntitySet="Current_Details">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="company_id" ColumnName="company_id" />
@@ -418,7 +418,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Currenties">
-            <EntityTypeMapping TypeName="BarcoSDbModel.Currenty">
+            <EntityTypeMapping TypeName="BarcoSModel.Currenty">
               <MappingFragment StoreEntitySet="Currenties">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="company_id" ColumnName="company_id" />
@@ -438,7 +438,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Features">
-            <EntityTypeMapping TypeName="BarcoSDbModel.Feature">
+            <EntityTypeMapping TypeName="BarcoSModel.Feature">
               <MappingFragment StoreEntitySet="Features">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="company_id" ColumnName="company_id" />
@@ -447,7 +447,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Products">
-            <EntityTypeMapping TypeName="BarcoSDbModel.Product">
+            <EntityTypeMapping TypeName="BarcoSModel.Product">
               <MappingFragment StoreEntitySet="Products">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="company_id" ColumnName="company_id" />
@@ -474,7 +474,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="users">
-            <EntityTypeMapping TypeName="BarcoSDbModel.user">
+            <EntityTypeMapping TypeName="BarcoSModel.user">
               <MappingFragment StoreEntitySet="users">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="company_id" ColumnName="company_id" />
@@ -497,7 +497,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Warehouses">
-            <EntityTypeMapping TypeName="BarcoSDbModel.Warehouse">
+            <EntityTypeMapping TypeName="BarcoSModel.Warehouse">
               <MappingFragment StoreEntitySet="Warehouses">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="company_id" ColumnName="company_id" />
