@@ -17,3 +17,7 @@ There we go!
 
 Project deployed on Azure services.
 barcosrestapi.azurewebsites.net
+
+Api Key for adding User:
+BarcoS Api Key: 
+SohNoQHtcGZsTH1JY5zkKiU8Whvp8VV5xWyaThNmb6nhwRK4YdYYIgEtO6AKDengijhMXtwsDhMaDLsZSnl9L5y2RzJ62duyPmXL
