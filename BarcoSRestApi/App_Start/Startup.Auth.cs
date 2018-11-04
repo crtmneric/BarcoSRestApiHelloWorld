@@ -12,7 +12,7 @@ namespace BarcoSRestApi
         {
             OAuthOptions = new OAuthAuthorizationServerOptions
             {
-                TokenEndpointPath = new PathString("/oauth/token"),
+                TokenEndpointPath = new PathString("/api/v1/oauth/token"),
                 Provider = new OAuthAppProvider(),
                 AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(10),
                 AllowInsecureHttp = true

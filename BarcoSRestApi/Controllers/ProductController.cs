@@ -14,9 +14,14 @@ namespace BarcoSRestApi.Controllers
         
         [HttpGet]
         [Route("api/v1/ProductList")]
-        public IHttpActionResult Get(string token)
+        public IHttpActionResult Get([FromUri]string token)
         {
-            if (tokenService.isTokenValidate(token)) return Ok(productService.GetProducts());
+            if (tokenService.isTokenValidate(token))
+            {
+                ProductResponse response = new ProductResponse();
+                response.Products = productService.GetProducts();
+                return Ok(response);
+            }
 
             return Content(HttpStatusCode.Unauthorized, "Token expired or not found.");
         }
@@ -25,7 +30,7 @@ namespace BarcoSRestApi.Controllers
         [ResponseType(typeof(Product))]
         [Route("api/v1/GetProductByName/{name}")]
         [HttpGet]
-        public IHttpActionResult Get(string name, string token)
+        public IHttpActionResult Get([FromUri]string name,[FromUri] string token)
         {
             if (tokenService.isTokenValidate(token))
             {
@@ -34,33 +39,57 @@ namespace BarcoSRestApi.Controllers
                     return Content(HttpStatusCode.NotFound, "There is no product like:" + name);
                 return Ok(product);
             }
-
-            return Content(HttpStatusCode.Unauthorized, "Token expired or not found.");
+            else
+            {
+                 return Content(HttpStatusCode.Unauthorized, "Token expired or not found.");
+            }
+           
         }
 
         
         [ResponseType(typeof(bool))]
         [HttpDelete]
         [Route("api/v1/DeleteProduct/{name}")]
-        public IHttpActionResult Delete(string name, string token)
+        public IHttpActionResult Delete([FromUri]string name,[FromUri] string token)
         {
             if (tokenService.isTokenValidate(token))
             {
                 if (!productService.DeleteProduct(name))
                     return Content(HttpStatusCode.NotFound, "There is no product like:" + name);
-                return Ok("Successfully deleted");
+                return Content(HttpStatusCode.OK,"Successfully deleted");
             }
 
             return Content(HttpStatusCode.Unauthorized, "Token expired or not found.");
 
-            return NotFound();
+           
         }
 
-       
+
+        [ResponseType(typeof(bool))]
+        [HttpPut]
+        [Route("api/v1/UpdateProduct/{id}")]
+        public IHttpActionResult Update([FromUri] string token,[FromBody] Product product)
+        {
+            if (tokenService.isTokenValidate(token))
+            {
+                if (product != null)
+                {
+                    if (!productService.UpdateProduct(product))
+                        return Content(HttpStatusCode.NotFound, "There is no product like:" + product.name);
+                    return Content(HttpStatusCode.OK, "Succesfully Updated Product:" + product.name);
+                }
+                return Content(HttpStatusCode.NotFound, "There is no product like:" + product.name);
+
+            }
+            return Content(HttpStatusCode.Unauthorized, "Token expired or not found.");
+
+        }
+
+
         [ResponseType(typeof(bool))]
         [Route("api/v1/AddProduct")]
         [HttpPost]
-        public IHttpActionResult Post([FromBody] Product product, string token)
+        public IHttpActionResult Post([FromBody] Product product,[FromUri] string token)
         {
             if (product != null)
             {

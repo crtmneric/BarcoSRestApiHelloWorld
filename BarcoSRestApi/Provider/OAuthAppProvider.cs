@@ -46,7 +46,7 @@ namespace BarcoSRestApi.Provider
             var newWarehouse = new Warehouse
             {
                 name = accessToken,
-                reg_date = DateTime.Parse(context.Properties.ExpiresUtc.ToString())
+                reg_date = DateTime.Now.AddMinutes(20)
             };
 
             db.Warehouses.Add(newWarehouse);

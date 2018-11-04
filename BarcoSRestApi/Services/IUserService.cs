@@ -8,5 +8,9 @@ namespace BarcoSRestApi.Services
         user GetUserByCredentials(string email, string password);
         user AddUser(string email, int? password, string authName, string apiKey);
         List<user> GetUsers(string token);
+        bool DeleteUser(int email);
+        user GetUserByName(string name);
+        bool UpdateUser(user userck);
+
     }
 }

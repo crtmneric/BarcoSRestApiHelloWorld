@@ -24,8 +24,8 @@ namespace BarcoSRestApi
                         c.OAuth2("oauth2")
                             .Description("OAuth2 Implicit Grant")
                             .Flow("implicit")
-                            .AuthorizationUrl("http://barcosrestapi.azurewebsites.net/api/v1/AddUser")
-                            .TokenUrl("http://barcosrestapi.azurewebsites.net/oauth/token")
+                            .AuthorizationUrl("")
+                            .TokenUrl("")
                             .Scopes(scopes =>
                             {
                                 scopes.Add("read", "Read access to protected resources");

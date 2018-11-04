@@ -88,3 +88,4 @@ C:\Users\Serkan\source\repos\BarcoSRestApi\BarcoSRestApi\obj\Debug\BarcoSRestApi
 C:\Users\Serkan\source\repos\BarcoSRestApi\BarcoSRestApi\obj\Debug\BarcoSRestApi.csproj.CopyComplete
 C:\Users\Serkan\source\repos\BarcoSRestApi\BarcoSRestApi\obj\Debug\BarcoSRestApi.dll
 C:\Users\Serkan\source\repos\BarcoSRestApi\BarcoSRestApi\obj\Debug\BarcoSRestApi.pdb
+C:\Users\Serkan\source\repos\BarcoSRestApi\BarcoSRestApi\obj\Debug\BarcoSRestApi.csprojAssemblyReference.cache

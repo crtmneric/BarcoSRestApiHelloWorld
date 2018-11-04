@@ -9,5 +9,6 @@ namespace BarcoSRestApi.Services
         Product GetProduct(string name);
         bool DeleteProduct(string name);
         bool AddProduct(Product product);
+        bool UpdateProduct(Product product);
     }
 }

@@ -6,3 +6,22 @@
 2018-06-27 14:59:28,429 [22] INFO  BarcoSRestApi.Extensions.Logger - successfully added user 
 2018-06-27 15:41:46,330 [9] INFO  BarcoSRestApi.Extensions.Logger - trying to add user for email:, password: 0, authName: string, apiKey: SohNoQHtcGZsTH1JY5zkKiU8Whvp8VV5xWyaThNmb6nhwRK4YdYYIgEtO6AKDengijhMXtwsDhMaDLsZSnl9L5y2RzJ62duyPmXL
 2018-06-27 15:43:38,654 [6] INFO  BarcoSRestApi.Extensions.Logger - trying to add user for email:, password: 0, authName: string, apiKey: SohNoQHtcGZsTH1JY5zkKiU8Whvp8VV5xWyaThNmb6nhwRK4YdYYIgEtO6AKDengijhMXtwsDhMaDLsZSnl9L5y2RzJ62duyPmXL
+2018-11-03 19:51:02,987 [8] ERROR BarcoSRestApi.Extensions.Logger - Product Update Failed
+System.NullReferenceException: Nesne baþvurusu bir nesnenin örneðine ayarlanmadý.
+   konum: BarcoSRestApi.Services.ProductService.UpdateProduct(Product product) C:\Users\Serkan\source\repos\BarcoSRestApi\BarcoSRestApi\Services\ProductService.cs içinde: satýr 42
+2018-11-03 19:51:51,352 [14] ERROR BarcoSRestApi.Extensions.Logger - Product Update Failed
+System.NullReferenceException: Nesne baþvurusu bir nesnenin örneðine ayarlanmadý.
+   konum: BarcoSRestApi.Services.ProductService.UpdateProduct(Product product) C:\Users\Serkan\source\repos\BarcoSRestApi\BarcoSRestApi\Services\ProductService.cs içinde: satýr 42
+2018-11-03 19:56:50,956 [12] ERROR BarcoSRestApi.Extensions.Logger - Product Update Failed
+System.ArgumentOutOfRangeException: The specified parameter type 'BarcoSRestApi.Models.Product' is not valid. Only scalar types, such as System.Int32, System.Decimal, System.DateTime, and System.Guid, are supported.
+Parametre adý: item
+   konum: System.Data.Entity.Core.Objects.ObjectParameterCollection.Add(ObjectParameter item)
+   konum: System.Data.Entity.Core.Objects.ObjectContext.CreateQuery[T](String queryString, ObjectParameter[] parameters)
+   konum: System.Data.Entity.Internal.Linq.InternalSet`1.BuildFindQuery(WrappedEntityKey key)
+   konum: System.Data.Entity.Internal.Linq.InternalSet`1.FindInStore(WrappedEntityKey key, String keyValuesParamName)
+   konum: System.Data.Entity.Internal.Linq.InternalSet`1.Find(Object[] keyValues)
+   konum: System.Data.Entity.DbSet`1.Find(Object[] keyValues)
+   konum: BarcoSRestApi.Services.ProductService.UpdateProduct(Product product) C:\Users\Serkan\source\repos\BarcoSRestApi\BarcoSRestApi\Services\ProductService.cs içinde: satýr 44
+2018-11-03 20:09:02,996 [13] INFO  BarcoSRestApi.Extensions.Logger - trying to add user for email:erkam@erkam.com, password: 1234, authName: tester, apiKey: SohNoQHtcGZsTH1JY5zkKiU8Whvp8VV5xWyaThNmb6nhwRK4YdYYIgEtO6AKDengijhMXtwsDhMaDLsZSnl9L5y2RzJ62duyPmXL
+2018-11-03 20:09:03,035 [13] INFO  BarcoSRestApi.Extensions.Logger - successfully created user, now inserting to database: BarcoSRestApi.Models.user
+2018-11-03 20:09:03,049 [13] INFO  BarcoSRestApi.Extensions.Logger - successfully added user 
