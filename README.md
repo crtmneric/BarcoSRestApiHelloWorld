@@ -1,4 +1,7 @@
 # BarcoSRestApiHelloWorld
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c7ac0f12501d492aa0c02d962ea231cb)](https://app.codacy.com/app/crtmneric/BarcoSRestApiHelloWorld?utm_source=github.com&utm_medium=referral&utm_content=crtmneric/BarcoSRestApiHelloWorld&utm_campaign=Badge_Grade_Dashboard)
+
 This is the first api i made with web api2 .net. It has unit tests,logger and swagger integration, Oauth2.0 with some clean codes and passions.
 
 
